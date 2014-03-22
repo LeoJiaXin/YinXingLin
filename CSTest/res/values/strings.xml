@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CSTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_image">ImageActivity</string>
+    <string name="title_activity_regiser">RegiserActivity</string>
+    <string name="title_activity_landing_face">LandingFace</string>
+    <string name="title_activity_stylea">Stylea</string>
+    <string name="title_activity_land_face">LandFace</string>
+    <string name="stylea_button">款式1</string>
+    <string name="styleb_button">款式2</string>
+    <string name="stylec_button">款式3</string>
+    <string name="styled_button">款式4</string>
+    <string name="title_activity_stylec">Stylec</string>
+    <string name="title_activity_styled">Styled</string>
+    <string name="default_menu_cell_name">菜名</string>
+    <string name="default_menu_cell_price">00.00</string>
+    <string name="default_menu_cell_commet">0</string>
+    <string name="title_activity_my">MyActivity</string>
+    <string name="hello_world">Hello world!</string>
+	<string name="more">更多</string>
+	<string name="app_title">今日食堂</string>
+</resources>

@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LandFace" >
+	<Button 
+	    android:id="@+id/syle_a"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/stylea_button"
+	    />
+	<Button 
+	    android:id="@+id/syle_b"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/styleb_button"
+	    />
+	<Button 
+	    android:id="@+id/syle_c"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/stylec_button"
+	    />
+	<Button 
+	    android:id="@+id/syle_d"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:text="@string/styled_button"
+	    />
+
+</LinearLayout>
