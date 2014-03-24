@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -19,6 +19,7 @@ import android.widget.Toast;
 public class LoginFace extends Activity {
 	
 	private EditText username,password; 
+	private boolean quit_state = false;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -46,6 +47,7 @@ public class LoginFace extends Activity {
 											Intent intent = new Intent();
 											intent.setClass(LoginFace.this, MainFace.class);
 											startActivity(intent);
+											finish();
 										}else{
 											Toast.makeText(LoginFace.this, "密码不正确或其他原因", Toast.LENGTH_SHORT).show();
 										}
@@ -67,15 +69,30 @@ public class LoginFace extends Activity {
 	}
 
 	@Override
-	protected void onDestroy() {
-		super.onDestroy();
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		switch(keyCode) {
+		case KeyEvent.KEYCODE_BACK:
+			if(!quit_state) {
+	    		Toast.makeText(this, "再按一次退出", Toast.LENGTH_SHORT).show();
+	    		quit_state = true;
+	    		new Thread(new Runnable() {
+					
+					@Override
+					public void run() {
+						try {
+							Thread.sleep(3000);
+						} catch (InterruptedException e) {
+							// TODO Auto-generated catch block
+							e.printStackTrace();
+						}
+						quit_state = false;
+					}
+				}).start();
+	    		return true;
+	    	}
+			break;
+		default:break;
+		}
+		return super.onKeyDown(keyCode, event);
 	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.login_face, menu);
-		return true;
-	}
-
 }

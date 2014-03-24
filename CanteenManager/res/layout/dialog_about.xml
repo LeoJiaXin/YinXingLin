@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/about_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/funmi_name" />
+    <TextView 
+        android:id="@+id/about_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/about_name"
+        android:text="@string/funmi_description" 
+        />
+    <Button 
+        android:id="@+id/about_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/more_bn"
+        android:layout_below="@id/about_detail"
+        android:text="@string/ok"
+        style="@style/MoreBnStyle"
+        />
+
+</RelativeLayout>

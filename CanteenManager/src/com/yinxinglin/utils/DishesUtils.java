@@ -70,7 +70,6 @@ public class DishesUtils {
 						dish.setGood(json2.getInt("good"));
 						dish.setType(json2.getString("type"));
 						dish.setCanteen(json2.getString("canteen"));
-
 						dishes.add(dish);
 					}
 					HttpUtils.handler.post(new Runnable() {

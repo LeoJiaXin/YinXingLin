@@ -1,28 +1,14 @@
 package com.yinxinglin.utils;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.HttpStatus;
-import org.apache.http.NameValuePair;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.client.utils.URLEncodedUtils;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.yinxinglin.object.User;
-import android.os.Handler;
 
 public class UserUtils {
 	public static DoSomeThing justdoit;
@@ -31,11 +17,13 @@ public class UserUtils {
 	
 	public static void loginConfirm(String name, String password, DoSomeThing justdoit) {
 		
-		List<NameValuePair> params = new ArrayList<NameValuePair>();
-		params.add(new BasicNameValuePair("uname",name));
-		params.add(new BasicNameValuePair("password", password));	
-		JSONObject json = HttpUtils.getInfo(HttpUtils.URL+
-				"confirm?"+ URLEncodedUtils.format(params, HTTP.UTF_8));
+		StringBuffer sb = new StringBuffer(HttpUtils.URL);
+		sb.append("confirm?uname=");
+		sb.append(name);
+		sb.append("&password=");
+		sb.append(password);
+		
+		JSONObject json = HttpUtils.getInfo(sb.toString());
 		try {
 			if(json != null) {
 				result = json.getBoolean("result");
@@ -59,7 +47,12 @@ public class UserUtils {
 		StringBuffer URL = new StringBuffer();
 		URL.append(HttpUtils.URL);
 		URL.append("confirm?uname=");
-		URL.append(name);
+		try {
+			URL.append(URLEncoder.encode(name, "UTF-8"));
+		} catch (UnsupportedEncodingException e2) {
+			// TODO Auto-generated catch block
+			e2.printStackTrace();
+		}
 		JSONObject json = HttpUtils.getInfo(URL.toString());
 		try {
 			result = json.getBoolean("result");
@@ -95,7 +88,7 @@ public class UserUtils {
 		String URL = HttpUtils.URL + "update";
 		JSONObject json = new JSONObject();
 		try {
-			json.put("isCreat", isCreat);
+			json.put("isCreate", isCreat);
 			json.put("name", user.getName());
 			json.put("password", user.getPassword());
 			json.put("school", user.getSchool());
@@ -106,8 +99,7 @@ public class UserUtils {
 			e.printStackTrace();
 		}
 		JSONObject obj = HttpUtils.getInfo(URL,json);
-			result = obj.getBoolean("info");
-			System.out.println("aaa");
+			result = obj.getBoolean("isSuccess");
 		HttpUtils.handler.post(new Runnable() {
 			@Override
 			public void run() {

@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="10"
-        android:targetSdkVersion="10" />
+        android:targetSdkVersion="11" />
 
     <application
         android:allowBackup="true"
@@ -32,9 +32,40 @@
         </activity>
         <activity
             android:name="com.yinxinglin.activity.MainFace"
-            android:label="@string/title_activity_main_face" >
+            android:label="@string/title_activity_main_face"
+            android:theme="@style/MainIndicators" >
+        </activity>
+        <activity
+            android:name="com.yinxinglin.activity.DetailDescriptionFace"
+            android:label="@string/title_activity_detail_description_face" >
+        </activity>
+        <activity
+            android:name="com.yingxinlin.more.PriceComFace"
+            android:label="@string/title_activity_price_com_face" >
+        </activity>
+        <activity
+            android:name="com.yingxinlin.more.SquareFace"
+            android:label="@string/title_activity_pic_show_face" >
+        </activity>
+        <activity
+            android:name="com.yingxinlin.more.CallTogetherFace"
+            android:label="@string/title_activity_call_together_face" >
+        </activity>
+        <activity
+            android:name="com.yingxinlin.more.TakeAwayFace"
+            android:label="@string/title_activity_take_away_face" >
+        </activity>
+        <activity
+            android:name="com.yinxinglin.activity.PersonMegFace"
+            android:label="@string/title_activity_person_meg_face" >
+        </activity>
+        <activity
+            android:name="com.yinxinglin.activity.AddDishesFace"
+            android:label="@string/title_activity_add_dishes_face" >
         </activity>
     </application>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

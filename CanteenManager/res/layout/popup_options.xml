@@ -1,0 +1,22 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	<Button 
+	    android:id="@+id/personal_message"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="@string/personal_meg"
+	    android:background="@drawable/setting_bn_popup"
+	    />
+    <Button 
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/personal_message"
+        android:layout_alignLeft="@id/personal_message"
+        android:layout_alignRight="@id/personal_message"
+        android:text="@string/settings"
+        android:background="@drawable/setting_bn_popup"
+        />
+</RelativeLayout>

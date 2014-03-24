@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <GridView 
+        android:id="@+id/menu_face"
+        android:numColumns="2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:stretchMode="columnWidth"
+        ></GridView>
+    <RelativeLayout 
+        android:layout_width="match_parent"
+   		android:layout_height="match_parent"
+   		android:layout_below="@id/menu_face"
+        >
+        <TextView 
+            android:id="@+id/loading_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/more"
+            />
+        <ImageView
+            android:id="@+id/loading_anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/menu_cell_zan"
+			android:layout_toLeftOf="@id/loading_tip"
+            android:contentDescription="@drawable/menu_cell_zan"
+            />
+        
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -8,100 +8,110 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".RegiserActivity" >
 
-    <TextView 
-        android:id="@+id/name_t"
-        android:layout_width="100dip"
-        android:layout_height="wrap_content"
-        android:text="用户名"
-        />
+    <TextView
+   	    android:id="@+id/blank2" 
+   	    android:layout_width="fill_parent"
+   	    android:layout_height="30dip"
+   	    />
+   
     <EditText 
         android:id="@+id/name_e"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/name_t"
+        android:inputType="text"
+        android:layout_below="@id/blank2"
+        android:layout_centerHorizontal="true"
+	    android:hint="@string/username"
+	    android:background="@drawable/login_style"
+	    style="@style/MyEditStyle"
+
         />
-    <TextView 
-        android:id="@+id/passw_t"
-        android:layout_width="100dip"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/name_t"
-        android:text="密码"
-        />
+
     <EditText 
         android:id="@+id/pass_e"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/passw_t"
         android:layout_below="@id/name_e"
+        android:inputType="textPassword"
+	    android:background="@color/my_gray"
+	    android:layout_alignRight="@id/name_e"
+	    android:layout_alignLeft="@id/name_e"
+	    android:hint="@string/password"
+	    style="@style/MyEditStyle"
         />
-    <TextView 
-        android:id="@+id/cpassw_t"
-        android:layout_width="100dip"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passw_t"
-        android:text="确认密码"
-        />
+
     <EditText 
         android:id="@+id/cpass_e"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/cpassw_t"
         android:layout_below="@id/pass_e"
+        android:inputType="textPassword"
+	    android:layout_alignRight="@id/name_e"
+	    android:layout_alignLeft="@id/name_e"
+	    android:background="@drawable/register_style"
+	    android:hint="@string/confirm_password"
+	    style="@style/MyEditStyle"
         />
-    <TextView 
-        android:id="@+id/shool_t"
-        android:layout_width="100dip"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/cpassw_t"
-        android:text="所处学校"
-        />
+
     <EditText 
         android:id="@+id/shool_e"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/shool_t"
         android:layout_below="@id/cpass_e"
+        android:background="@color/my_gray"
+	    android:layout_alignRight="@id/name_e"
+	    android:layout_alignLeft="@id/name_e"
+	    android:hint="@string/register_school"
+	    style="@style/MyEditStyle"
         />
-    <TextView 
-        android:id="@+id/address_t"
-        android:layout_width="100dip"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/shool_t"
-        android:text="地址"
-        />
+
     <EditText 
         android:id="@+id/address_e"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/address_t"
         android:layout_below="@id/shool_e"
+        android:inputType="text"
+	    android:layout_alignRight="@id/name_e"
+	    android:layout_alignLeft="@id/name_e"
+	    android:background="@drawable/register_style"
+	    android:hint="@string/register_addrs"
+	    style="@style/MyEditStyle"
         />
-    <TextView 
-        android:id="@+id/info_t"
-        android:layout_width="100dip"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/address_t"
-        android:text="店铺/食堂描述"
-        />
+
     <EditText 
         android:id="@+id/info_e"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/info_t"
         android:layout_below="@id/address_e"
+        android:background="@color/my_gray"
+	    android:layout_alignRight="@id/name_e"
+	    android:layout_alignLeft="@id/name_e"
+	    android:hint="@string/register_info"
+	    android:lines="6"
+	    style="@style/MyEditStyle"
         />
-    <Button 
-        android:id="@+id/register"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/info_e"
-        android:text="注册"
-        />
-    <Button 
-        android:id="@+id/alter"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/register"
-        android:text="修改"
-        />
+
+	<Button
+	    android:id="@+id/register_confirm"
+	    android:layout_width="150dip"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/info_e"
+	    android:layout_alignLeft="@id/name_e"
+	    android:background="@drawable/login_in_button"
+	    android:text="@string/register_ok"
+	    style="@style/MyTextStyle"
+	        />
+	<Button 
+	   android:id="@+id/alter"
+	   android:layout_width="wrap_content"
+	   android:layout_height="wrap_content"
+	   android:text="@string/alter_info"
+	   android:background="@drawable/register_button"
+	   android:layout_toRightOf="@id/register_confirm"
+	   android:layout_alignTop="@id/register_confirm"
+	   android:layout_alignBottom="@id/register_confirm"
+	   android:layout_alignRight="@id/name_e"
+	   style="@style/MyTextStyle"
+	   />
+    
 </RelativeLayout>

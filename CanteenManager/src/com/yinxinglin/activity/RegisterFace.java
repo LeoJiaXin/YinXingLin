@@ -30,7 +30,7 @@ public class RegisterFace extends Activity {
 		shool = (EditText)findViewById(R.id.shool_e);
 		address = (EditText)findViewById(R.id.address_e);
 		info = (EditText)findViewById(R.id.info_e);
-		register = (Button)findViewById(R.id.register);
+		register = (Button)findViewById(R.id.register_confirm);
 		alter = (Button)findViewById(R.id.alter);
 		alter.setOnClickListener(new OnClickListener() {
 
