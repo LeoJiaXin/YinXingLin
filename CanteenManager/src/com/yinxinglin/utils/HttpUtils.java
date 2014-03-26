@@ -20,7 +20,7 @@ import android.os.Handler;
 
 public class HttpUtils {
 
-	public static final String URL = "http://192.168.1.127:8080/mywebsite/";
+	public static final String URL = "http://10.0.2.2:8080/mywebsite/";
 	public static Handler handler = null;
 	
 	public static void init(Handler handler) {

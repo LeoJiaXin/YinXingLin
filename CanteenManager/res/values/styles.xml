@@ -50,4 +50,9 @@
         <item name="android:textColor">@color/my_white</item>
         <item name="android:textSize">20sp</item>
     </style>
+    <style name="PriceTextStyle">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@color/vpi__background_holo_dark</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

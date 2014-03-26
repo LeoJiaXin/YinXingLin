@@ -22,9 +22,9 @@ public class PopupPicture extends PopupWindow{
     private static final int OPEN_CAMERA_CODE = 99;
 	private static final int OPEN_GALLERY_CODE = 100; 
     public static final int CROP_PHOTO_CODE = 101;
-    private static final String TEMP_FILENAME = "temp.jpg";
+    public static final String TEMP_FILENAME = "temp.jpg";
     
-    private String TEMP_PATH = ""; 
+    public static String TEMP_PATH = ""; 
     private File tempFile = null;
     private Context context = null;
     private View layout = null;
@@ -93,10 +93,10 @@ public class PopupPicture extends PopupWindow{
         intent.setDataAndType(uri, "image/*");
         intent.putExtra("output", Uri.fromFile(tempFile));
         intent.putExtra("crop", true);
-        intent.putExtra("aspectX", 19);
-        intent.putExtra("aspectY", 15);
-        intent.putExtra("outputX", 190);
-        intent.putExtra("outputY", 130);
+        intent.putExtra("aspectX", 1);
+        intent.putExtra("aspectY", 1);
+        intent.putExtra("outputX", 128);
+        intent.putExtra("outputY", 128);
         ((Activity)context).startActivityForResult(intent, CROP_PHOTO_CODE);
     }
 	

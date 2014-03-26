@@ -15,12 +15,28 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/before_add_pic"
+        android:hint="@string/dish_name"
         />
     <EditText 
         android:id="@+id/before_add_price"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/before_add_name"
+        android:hint="@string/dish_price"
+        />
+    <EditText 
+        android:id="@+id/before_add_canteen"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/before_add_price"
+        android:hint="@string/dish_canteen"
+        />
+    <EditText 
+        android:id="@+id/before_add_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/before_add_canteen"
+        android:hint="@string/dish_type"
         />
     <Button 
         android:id="@+id/before_add_submit"
@@ -28,7 +44,7 @@
         android:layout_height="wrap_content"
         android:text="@string/ok"
         android:background="@drawable/register_button"
-        android:layout_below="@id/before_add_price"
+        android:layout_below="@id/before_add_type"
         style="@style/MyTextStyle"
         />
 </RelativeLayout>

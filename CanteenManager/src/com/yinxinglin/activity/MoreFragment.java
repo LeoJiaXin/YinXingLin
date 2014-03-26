@@ -1,10 +1,10 @@
 package com.yinxinglin.activity;
 
 import com.yingxinlin.canteenmanager.R;
-import com.yingxinlin.more.CallTogetherFace;
-import com.yingxinlin.more.PriceComFace;
-import com.yingxinlin.more.SquareFace;
-import com.yingxinlin.more.TakeAwayFace;
+import com.yinxinglin.more.CallTogetherFace;
+import com.yinxinglin.more.PriceComFace;
+import com.yinxinglin.more.SquareFace;
+import com.yinxinglin.more.TakeAwayFace;
 
 import android.content.Intent;
 import android.os.Bundle;

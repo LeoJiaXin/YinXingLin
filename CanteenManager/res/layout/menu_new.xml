@@ -2,11 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
-
-    <TextView 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world"
+    <ExpandableListView
+        android:id="@+id/new_total_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:drawSelectorOnTop="false"
+        android:background="@drawable/new_tab_style"
         />
-
 </RelativeLayout>

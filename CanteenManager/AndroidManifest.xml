@@ -40,19 +40,19 @@
             android:label="@string/title_activity_detail_description_face" >
         </activity>
         <activity
-            android:name="com.yingxinlin.more.PriceComFace"
+            android:name="com.yinxinglin.more.PriceComFace"
             android:label="@string/title_activity_price_com_face" >
         </activity>
         <activity
-            android:name="com.yingxinlin.more.SquareFace"
+            android:name="com.yinxinglin.more.SquareFace"
             android:label="@string/title_activity_pic_show_face" >
         </activity>
         <activity
-            android:name="com.yingxinlin.more.CallTogetherFace"
+            android:name="com.yinxinglin.more.CallTogetherFace"
             android:label="@string/title_activity_call_together_face" >
         </activity>
         <activity
-            android:name="com.yingxinlin.more.TakeAwayFace"
+            android:name="com.yinxinglin.more.TakeAwayFace"
             android:label="@string/title_activity_take_away_face" >
         </activity>
         <activity

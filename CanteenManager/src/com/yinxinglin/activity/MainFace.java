@@ -1,14 +1,8 @@
 package com.yinxinglin.activity;
 
-import java.io.File;
-import java.util.ArrayList;
-
 import com.viewpagerindicator.TabPageIndicator;
 import com.yingxinlin.canteenmanager.R;
 import com.yinxinglin.activity.PopupPicture.PicSolver;
-import com.yinxinglin.object.Dishes;
-import com.yinxinglin.utils.DishesUtils;
-import com.yinxinglin.utils.DoSomeThing;
 import com.yinxinglin.utils.HttpUtils;
 
 import android.content.Intent;
@@ -33,7 +27,6 @@ import android.widget.Toast;
 public class MainFace extends FragmentActivity {
     
 	private static final String[] CONTENT = new String[] { "推荐", "分类", "发现" };   
-	private ArrayList<Dishes> menu;
     private RecFragment rec;
     private NewFragment new_one;
     private MoreFragment found;
@@ -58,24 +51,7 @@ public class MainFace extends FragmentActivity {
 
         TabPageIndicator indicator = (TabPageIndicator)findViewById(R.id.indicator_tab);
         indicator.setViewPager(pager);
-        menu = new ArrayList<Dishes>();
-        RecFragment.menu = menu;
         HttpUtils.init(new Handler());
-        new Thread(new Runnable() {
-			
-			@Override
-			public void run() {
-				DishesUtils.getDishes(0, menu, "uestc",new DoSomeThing() {
-					
-					@Override
-					public void doit(boolean flag,String s,Object obj) {
-						if(flag) {
-							rec.reflesh();
-						}
-					}
-				});	
-			}
-		}).start();
         
         //主界面的右上方按钮事件
         layout = getLayoutInflater().inflate(R.layout.popup_options, null);
@@ -166,8 +142,6 @@ public class MainFace extends FragmentActivity {
     
     @Override
 	protected void onDestroy() {
-		for(int i=0;i<RecFragment.menu.size();i++)
-			RecFragment.menu.get(i).getPhoto().recycle();
 		super.onDestroy();	
 	}
 
